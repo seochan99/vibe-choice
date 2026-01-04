@@ -21,7 +21,11 @@ export async function getAllGameIds(): Promise<string[]> {
       return []
     }
 
-    return games?.map((game) => game.id) || []
+    if (!games) {
+      return []
+    }
+
+    return games.map((game: { id: string }) => game.id)
   } catch (error) {
     console.error('Failed to get game IDs:', error)
     return []
