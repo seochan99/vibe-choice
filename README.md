@@ -83,6 +83,8 @@ Supabase MCP 연결 정보는 [docs/MCP_CONNECTION.md](./docs/MCP_CONNECTION.md)
 
 데이터베이스 설정 완료 요약은 [docs/DATABASE_SUMMARY.md](./docs/DATABASE_SUMMARY.md)를 참고하세요.
 
+도메인 구매 및 Vercel 연결 방법은 [docs/DOMAIN_SETUP.md](./docs/DOMAIN_SETUP.md)를 참고하세요.
+
 ## Learn More
 
 - [Next.js Documentation](https://nextjs.org/docs)
