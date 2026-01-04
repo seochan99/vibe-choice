@@ -1,0 +1,32 @@
+import { MetadataRoute } from 'next'
+
+export default function robots(): MetadataRoute.Robots {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://vibechoice.com'
+
+  return {
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: [
+          '/api/',
+          '/auth/',
+          '/profile',
+          '/setup-username',
+        ],
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+        disallow: [
+          '/api/',
+          '/auth/',
+          '/profile',
+          '/setup-username',
+        ],
+      },
+    ],
+    sitemap: `${baseUrl}/sitemap.xml`,
+  }
+}
+
