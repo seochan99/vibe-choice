@@ -26,3 +26,4 @@ CREATE POLICY "Game owners can delete images" ON storage.objects
         AND auth.uid()::text = (string_to_array(name, '/'))[1]
     );
 
+

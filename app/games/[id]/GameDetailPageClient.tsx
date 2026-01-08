@@ -11,6 +11,7 @@ import { CommentSection } from '@/features/comment'
 import { getFriendlyErrorMessage } from '@/shared/lib/errorMessages'
 import { useToast } from '@/shared/hooks/useToast'
 import { Toast } from '@/shared/components/Toast'
+import { trackCompleteCoreValue } from '@/shared/lib/gtag'
 
 interface GameDetailPageClientProps {
   params: Promise<{ id: string }>
@@ -87,6 +88,9 @@ export default function GameDetailPageClient({ params }: GameDetailPageClientPro
 
       await voteGame(game.id, choice)
       setUserVote(choice)
+
+      // 핵심 가치 완료 이벤트 추적
+      trackCompleteCoreValue(game.id, choice)
 
       // 투표 완료 피드백
       showToast('선택했어요!', 'success')
@@ -275,4 +279,5 @@ export default function GameDetailPageClient({ params }: GameDetailPageClientPro
     </div>
   )
 }
+
 

@@ -70,3 +70,4 @@ Realtime이 제대로 작동하는지 확인하려면:
 - [Supabase Realtime 문서](https://supabase.com/docs/guides/realtime)
 - [PostgreSQL Replication 문서](https://www.postgresql.org/docs/current/logical-replication.html)
 
+

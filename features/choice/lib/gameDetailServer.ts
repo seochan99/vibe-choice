@@ -66,3 +66,4 @@ export async function getGameByIdForSEO(gameId: string): Promise<{
   }
 }
 
+

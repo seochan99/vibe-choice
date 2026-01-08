@@ -131,3 +131,4 @@
    npx supabase gen types typescript --project-id udiuhjrshhuxkjmcwmek > shared/types/database.ts
    ```
 
+

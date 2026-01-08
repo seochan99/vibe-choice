@@ -73,3 +73,4 @@ npm run dev
 - URL과 API 키가 정확한지 확인
 - Supabase Dashboard에서 프로젝트 상태 확인
 
+

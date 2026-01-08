@@ -12,6 +12,7 @@ import { getGameStats } from '@/features/choice/lib'
 import { useVoteRealtime } from '@/features/choice/hooks/useVoteRealtime'
 import { getFriendlyErrorMessage } from '@/shared/lib/errorMessages'
 import type { GameWithStats } from '@/entities/choice'
+import { trackViewLanding } from '@/shared/lib/gtag'
 
 export default function HomePageClient() {
   const router = useRouter()
@@ -20,6 +21,11 @@ export default function HomePageClient() {
   const [games, setGames] = useState<GameWithStats[]>([])
   const [isLoadingGames, setIsLoadingGames] = useState(true)
   const [sortBy, setSortBy] = useState<SortOption>('latest')
+
+  useEffect(() => {
+    // 랜딩 페이지 진입 이벤트 추적
+    trackViewLanding()
+  }, [])
 
   useEffect(() => {
     // 로딩이 완료되고 인증된 사용자인데 닉네임이 없으면 닉네임 설정 페이지로 리다이렉트
@@ -160,4 +166,5 @@ export default function HomePageClient() {
     </div>
   )
 }
+
 

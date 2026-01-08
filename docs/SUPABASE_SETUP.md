@@ -158,3 +158,4 @@ console.log('Games:', data)
 - Database → Usage에서 데이터베이스 사용량 모니터링
 - API → Usage에서 API 호출량 확인
 
+

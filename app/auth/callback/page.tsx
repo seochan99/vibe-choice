@@ -4,6 +4,7 @@ import { Suspense, useEffect } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useAuthStore } from '@/features/auth/store/authStore'
 import { getBrowserClient } from '@/shared/lib/supabase-client'
+import { trackSignUp } from '@/shared/lib/gtag'
 
 function CallbackContent() {
   const router = useRouter()
@@ -44,6 +45,9 @@ function CallbackContent() {
           
           // 상태 업데이트를 기다린 후 리다이렉트
           await new Promise(resolve => setTimeout(resolve, 500))
+          
+          // 가입 이벤트 추적 (인증 완료)
+          trackSignUp('google')
           
           // 사용자 정보 확인하여 닉네임이 없으면 닉네임 설정 페이지로, 있으면 메인으로
           const state = useAuthStore.getState()

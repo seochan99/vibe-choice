@@ -265,3 +265,4 @@ Vercel은 자동으로 SSL 인증서를 발급하고 관리합니다:
 - [Namecheap 도메인 관리 가이드](https://www.namecheap.com/support/knowledgebase/article.aspx/767/10/how-to-change-dns-for-a-domain/)
 - [GoDaddy DNS 설정 가이드](https://www.godaddy.com/help/change-nameservers-664)
 
+

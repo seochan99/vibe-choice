@@ -131,3 +131,4 @@ const { data, error } = await supabase.storage
 2. 테스트 이미지 업로드로 정책 검증
 3. 게임 생성 기능에서 이미지 업로드 구현
 
+

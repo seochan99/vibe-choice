@@ -241,3 +241,4 @@ Supabase Dashboard에서 SQL Editor를 사용하거나, Supabase CLI를 사용�
 
 전체 스키마 생성 SQL은 `supabase/migrations/` 폴더에 저장하는 것을 권장합니다.
 
+

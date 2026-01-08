@@ -1,11 +1,18 @@
 'use client'
 
+import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { CreateGameForm } from '@/features/choice/components'
 import { ProtectedRoute } from '@/features/auth'
+import { trackStartCoreFlow } from '@/shared/lib/gtag'
 
 export default function CreateGamePageClient() {
   const router = useRouter()
+
+  useEffect(() => {
+    // 핵심 플로우 시작 이벤트 추적
+    trackStartCoreFlow()
+  }, [])
 
   return (
     <ProtectedRoute>
@@ -37,4 +44,5 @@ export default function CreateGamePageClient() {
     </ProtectedRoute>
   )
 }
+
 

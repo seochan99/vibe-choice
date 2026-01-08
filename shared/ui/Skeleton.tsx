@@ -23,3 +23,4 @@ export function Skeleton({ className, variant = 'default' }: SkeletonProps) {
   )
 }
 
+

@@ -67,3 +67,4 @@ npx tsx scripts/test-supabase-connection.ts
 - 현재 사용 가능한 MCP 도구들은 Firebase용이지만, Supabase는 직접 클라이언트 라이브러리를 통해 연결합니다
 - 환경 변수는 서버 재시작 후 적용됩니다
 
+
